@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Filosófico Anime</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #1e1e2e; color: white; }
+        .container { max-width: 600px; margin: auto; background: #2a2a40; padding: 20px; border-radius: 10px; }
+        .btn { background: #ffcc00; color: #1e1e2e; padding: 10px; margin: 10px; border: none; cursor: pointer; font-weight: bold; }
+        .btn:hover { background: #ff5733; color: white; }
+        .result { display: none; font-size: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Filosófico Anime</h1>
+        <p>Responde las siguientes preguntas y descubre qué personaje de anime representa mejor tu filosofía de vida.</p>
+        
+        <form id="testForm">
+            <p>1. ¿Qué valor es más importante para ti?</p>
+            <input type="radio" name="q1" value="Naruto"> Superación personal<br>
+            <input type="radio" name="q1" value="Lelouch"> Justicia y estrategia<br>
+            <input type="radio" name="q1" value="Goku"> Fuerza y determinación<br>
+            <input type="radio" name="q1" value="Kenshin"> Paz y redención<br>
+            
+            <p>2. ¿Cómo enfrentas los problemas?</p>
+            <input type="radio" name="q2" value="Naruto"> Nunca me rindo, sigo adelante<br>
+            <input type="radio" name="q2" value="Lelouch"> Analizo y creo una estrategia<br>
+            <input type="radio" name="q2" value="Goku"> Peleo hasta el final<br>
+            <input type="radio" name="q2" value="Kenshin"> Busco una solución pacífica<br>
+            
+            <p>3. ¿Qué te motiva en la vida?</p>
+            <input type="radio" name="q3" value="Naruto"> Mis amigos y seres queridos<br>
+            <input type="radio" name="q3" value="Lelouch"> Un propósito mayor<br>
+            <input type="radio" name="q3" value="Goku"> Ser más fuerte cada día<br>
+            <input type="radio" name="q3" value="Kenshin"> Redimir mis errores<br>
+            
+            <br>
+            <button type="button" class="btn" onclick="calcularResultado()">Ver Resultado</button>
+        </form>
+        
+        <div id="resultado" class="result"></div>
+    </div>
+
+    <script>
+        function calcularResultado() {
+            let respuestas = { Naruto: 0, Lelouch: 0, Goku: 0, Kenshin: 0 };
+            let seleccionados = document.querySelectorAll('input[type=radio]:checked');
+            
+            if (seleccionados.length < 3) {
+                alert('Por favor responde todas las preguntas.');
+                return;
+            }
+            
+            seleccionados.forEach((respuesta) => {
+                respuestas[respuesta.value]++;
+            });
+            
+            let personaje = Object.keys(respuestas).reduce((a, b) => respuestas[a] > respuestas[b] ? a : b);
+            let mensaje = "Tu filosofía se parece a la de " + personaje + "!";
+            document.getElementById("resultado").innerText = mensaje;
+            document.getElementById("resultado").style.display = "block";
+        }
+    </script>
+</body>
+</html>
