@@ -12,9 +12,22 @@
         .btn { background: #ff5733; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
         footer { background: #222; color: white; padding: 10px; position: relative; bottom: 0; width: 100%; }
         img { max-width: 100%; border-radius: 10px; margin-top: 10px; }
+        .quote-box { font-style: italic; font-size: 18px; padding: 15px; background: #ffeeba; border-radius: 10px; margin: 20px auto; width: 80%; }
     </style>
+    <script>
+        function mostrarCita() {
+            const citas = [
+                "\"El dolor es inevitable, el sufrimiento es opcional.\" - Naruto Uzumaki",
+                "\"No importa lo profundo que sea el desespero, si mantienes la calma, la luz brillará de nuevo.\" - Guts (Berserk)",
+                "\"Para conocer a alguien de verdad, mira cómo trata a sus inferiores, no a sus iguales.\" - Sirius Black (Harry Potter, pero aplica aquí)",
+                "\"El poder no es voluntad, es el fenómeno de hacer que las cosas sucedan.\" - Madara Uchiha"
+            ];
+            const citaAleatoria = citas[Math.floor(Math.random() * citas.length)];
+            document.getElementById("cita").innerText = citaAleatoria;
+        }
+    </script>
 </head>
-<body>
+<body onload="mostrarCita()">
     <header>
         Filosofía & Manga
     </header>
@@ -31,15 +44,15 @@
         <div class="container">
             <h2>Sobre Mí</h2>
             <p>Soy un educador social y docente universitario, apasionado por la filosofía y el manga.</p>
-            <img src="https://via.placeholder.com/600x300" alt="Imagen sobre mí">
+            <img src="https://source.unsplash.com/600x300/?philosophy,books" alt="Imagen sobre mí">
         </div>
     </section>
     
-    <section id="filosofia-manga">
+    <section id="cita-filosofica">
         <div class="container">
-            <h2>Filosofía y Manga</h2>
-            <p>El manga es una poderosa herramienta para transmitir valores filosóficos. Desde la búsqueda de la verdad en "Fullmetal Alchemist" hasta los dilemas éticos en "Death Note", cada historia nos invita a reflexionar sobre la vida y la moral.</p>
-            <img src="https://via.placeholder.com/600x300" alt="Filosofía y Manga">
+            <h2>Cita Filosófica del Día</h2>
+            <div class="quote-box" id="cita"></div>
+            <button class="btn" onclick="mostrarCita()">Nueva Cita</button>
         </div>
     </section>
     
@@ -51,16 +64,7 @@
                 <li>📅 Taller en Espais Joves - 10 de Marzo</li>
                 <li>📅 Filosofía en el Manga en la Biblioteca - 20 de Marzo</li>
             </ul>
-            <img src="https://via.placeholder.com/600x300" alt="Eventos y talleres">
-        </div>
-    </section>
-    
-    <section id="testimonios">
-        <div class="container">
-            <h2>Testimonios</h2>
-            <p>"Este taller me hizo ver el anime desde otra perspectiva filosófica. ¡Muy recomendable!" - Laura M.</p>
-            <p>"Increíble cómo se pueden conectar conceptos filosóficos con historias que amamos." - Diego R.</p>
-            <img src="https://via.placeholder.com/600x300" alt="Testimonios">
+            <img src="https://source.unsplash.com/600x300/?conference,learning" alt="Eventos y talleres">
         </div>
     </section>
     
@@ -74,7 +78,7 @@
                 <textarea placeholder="Mensaje" required></textarea><br><br>
                 <button type="submit" class="btn">Enviar</button>
             </form>
-            <img src="https://via.placeholder.com/600x300" alt="Contacto">
+            <img src="https://source.unsplash.com/600x300/?contact,communication" alt="Contacto">
         </div>
     </section>
     
