@@ -14,8 +14,10 @@
         .container { background: #2a2a40; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(255,255,255,0.2); margin-bottom: 20px; }
         .btn { background: #ffcc00; color: #1e1e2e; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
         .btn:hover { background: #ff5733; color: white; }
-        footer { background: #ff5733; color: white; padding: 10px; position: relative; bottom: 0; width: 100%; font-size: 14px; }
+        footer { background: #ff5733; color: white; padding: 20px; position: relative; bottom: 0; width: 100%; font-size: 14px; display: flex; justify-content: space-between; align-items: center; }
         img { max-width: 100%; border-radius: 10px; margin-top: 10px; }
+        .social-icons a { color: white; margin: 0 10px; text-decoration: none; font-size: 20px; transition: color 0.3s; }
+        .social-icons a:hover { color: #ffcc00; }
     </style>
 </head>
 <body>
@@ -34,13 +36,32 @@
     <section>
         <div class="container">
             <h2>Bienvenido a Filosofía & Manga</h2>
-            <p>Exploramos el pensamiento crítico a través del anime y la filosofía.</p>
+            <p>Exploramos el pensamiento crítico a través del anime y la filosofía. Conectamos ideas filosóficas con historias icónicas del manga para reflexionar sobre valores universales, dilemas éticos y el significado de la vida.</p>
+            <img src="https://source.unsplash.com/800x400/?anime,philosophy" alt="Filosofía y Anime">
             <a href="#talleres" class="btn">Ver Talleres</a>
         </div>
     </section>
     
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos:</p>
+            <form>
+                <input type="text" placeholder="Nombre" required><br><br>
+                <input type="email" placeholder="Correo" required><br><br>
+                <textarea placeholder="Mensaje" required></textarea><br><br>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
     <footer>
-        &copy; 2024 Filosofía & Manga - Todos los derechos reservados
+        <div>&copy; 2024 Filosofía & Manga - Todos los derechos reservados</div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">📘</a>
+            <a href="https://twitter.com" target="_blank">🐦</a>
+            <a href="https://instagram.com" target="_blank">📸</a>
+        </div>
     </footer>
 </body>
 </html>
