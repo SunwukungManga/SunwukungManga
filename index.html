@@ -1,5 +1,4 @@
-# Crear un archivo HTML con la versión mejorada del código
-html_updated_content = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +11,7 @@ html_updated_content = """<!DOCTYPE html>
         .container { background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
         .btn { background: #ff5733; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
         footer { background: #222; color: white; padding: 10px; position: relative; bottom: 0; width: 100%; }
+        img { max-width: 100%; border-radius: 10px; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -31,6 +31,7 @@ html_updated_content = """<!DOCTYPE html>
         <div class="container">
             <h2>Sobre Mí</h2>
             <p>Soy un educador social y docente universitario, apasionado por la filosofía y el manga.</p>
+            <img src="https://via.placeholder.com/600x300" alt="Imagen sobre mí">
         </div>
     </section>
     
@@ -38,6 +39,7 @@ html_updated_content = """<!DOCTYPE html>
         <div class="container">
             <h2>Filosofía y Manga</h2>
             <p>El manga es una poderosa herramienta para transmitir valores filosóficos. Desde la búsqueda de la verdad en "Fullmetal Alchemist" hasta los dilemas éticos en "Death Note", cada historia nos invita a reflexionar sobre la vida y la moral.</p>
+            <img src="https://via.placeholder.com/600x300" alt="Filosofía y Manga">
         </div>
     </section>
     
@@ -49,6 +51,7 @@ html_updated_content = """<!DOCTYPE html>
                 <li>📅 Taller en Espais Joves - 10 de Marzo</li>
                 <li>📅 Filosofía en el Manga en la Biblioteca - 20 de Marzo</li>
             </ul>
+            <img src="https://via.placeholder.com/600x300" alt="Eventos y talleres">
         </div>
     </section>
     
@@ -57,6 +60,7 @@ html_updated_content = """<!DOCTYPE html>
             <h2>Testimonios</h2>
             <p>"Este taller me hizo ver el anime desde otra perspectiva filosófica. ¡Muy recomendable!" - Laura M.</p>
             <p>"Increíble cómo se pueden conectar conceptos filosóficos con historias que amamos." - Diego R.</p>
+            <img src="https://via.placeholder.com/600x300" alt="Testimonios">
         </div>
     </section>
     
@@ -70,23 +74,9 @@ html_updated_content = """<!DOCTYPE html>
                 <textarea placeholder="Mensaje" required></textarea><br><br>
                 <button type="submit" class="btn">Enviar</button>
             </form>
+            <img src="https://via.placeholder.com/600x300" alt="Contacto">
         </div>
     </section>
-    
-    <footer>
-        &copy; 2024 Filosofía & Manga - Todos los derechos reservados
-    </footer>
-</body>
-</html>"""
-
-# Guardar el archivo en un directorio accesible para el usuario
-file_path = "/mnt/data/index.html"
-with open(file_path, "w", encoding="utf-8") as file:
-    file.write(html_updated_content)
-
-# Proporcionar el enlace de descarga
-file_path
-
     
     <footer>
         &copy; 2024 Filosofía & Manga - Todos los derechos reservados
