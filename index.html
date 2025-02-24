@@ -5,31 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filosofía & Manga</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #1e1e2e; color: #ffffff; }
-        header { background: #ff5733; color: white; padding: 20px; font-size: 26px; font-weight: bold; text-transform: uppercase; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #1e1e2e; color: #ffffff; transition: background 0.5s, color 0.5s; }
+        header { background: #ff5733; color: white; padding: 20px; font-size: 26px; font-weight: bold; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; }
+        nav { display: flex; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: #ffcc00; }
         section { padding: 20px; max-width: 800px; margin: auto; }
         .container { background: #2a2a40; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(255,255,255,0.2); margin-bottom: 20px; }
-        .btn { background: #ffcc00; color: #1e1e2e; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn { background: #ffcc00; color: #1e1e2e; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        .btn:hover { background: #ff5733; color: white; }
         footer { background: #ff5733; color: white; padding: 10px; position: relative; bottom: 0; width: 100%; font-size: 14px; }
         img { max-width: 100%; border-radius: 10px; margin-top: 10px; }
-        .quote-box { font-style: italic; font-size: 20px; padding: 15px; background: #44475a; border-radius: 10px; margin: 20px auto; width: 80%; color: #ffcc00; font-weight: bold; }
     </style>
-    <script>
-        function mostrarCita() {
-            const citas = [
-                "\"El dolor es inevitable, el sufrimiento es opcional.\" - Naruto Uzumaki",
-                "\"No importa lo profundo que sea el desespero, si mantienes la calma, la luz brillará de nuevo.\" - Guts (Berserk)",
-                "\"Para conocer a alguien de verdad, mira cómo trata a sus inferiores, no a sus iguales.\" - Sirius Black",
-                "\"El poder no es voluntad, es el fenómeno de hacer que las cosas sucedan.\" - Madara Uchiha"
-            ];
-            const citaAleatoria = citas[Math.floor(Math.random() * citas.length)];
-            document.getElementById("cita").innerText = citaAleatoria;
-        }
-    </script>
 </head>
-<body onload="mostrarCita()">
+<body>
     <header>
-        Filosofía & Manga
+        <div>Filosofía & Manga</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="test.html">Test Filosófico</a>
+            <a href="chatbot.html">Chatbot</a>
+            <a href="galeria.html">Galería</a>
+            <a href="foro.html">Foro</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
     </header>
     
     <section>
@@ -40,43 +39,8 @@
         </div>
     </section>
     
-    <section id="cita-filosofica">
-        <div class="container">
-            <h2>Cita Filosófica del Día</h2>
-            <div class="quote-box" id="cita"></div>
-            <button class="btn" onclick="mostrarCita()">Nueva Cita</button>
-        </div>
-    </section>
-    
-    <section id="talleres">
-        <div class="container">
-            <h2>Próximos Eventos</h2>
-            <p>Consulta nuestros próximos talleres y eventos en Espais Joves y la Biblioteca.</p>
-            <ul>
-                <li>📅 Taller en Espais Joves - 10 de Marzo</li>
-                <li>📅 Filosofía en el Manga en la Biblioteca - 20 de Marzo</li>
-            </ul>
-            <img src="https://source.unsplash.com/600x300/?conference,learning" alt="Eventos y talleres">
-        </div>
-    </section>
-    
-    <section id="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>Para más información, contáctanos:</p>
-            <form>
-                <input type="text" placeholder="Nombre" required><br><br>
-                <input type="email" placeholder="Correo" required><br><br>
-                <textarea placeholder="Mensaje" required></textarea><br><br>
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-            <img src="https://source.unsplash.com/600x300/?contact,communication" alt="Contacto">
-        </div>
-    </section>
-    
     <footer>
         &copy; 2024 Filosofía & Manga - Todos los derechos reservados
     </footer>
 </body>
 </html>
-
